@@ -1,3 +1,21 @@
+body{
+
+	font-family: sans-serif;
+	background: linear-gradient(#191970, #87CEEB);
+}
+
+h1{
+	color: whitesmoke;
+}
+
+.header{
+	height:	10vh;
+}
+
+.intro-section{
+	height: 90vh;
+}
+
 .text-center{
 	text-align: center;
 	-moz-text-align-last: center;
