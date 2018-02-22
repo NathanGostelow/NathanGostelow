@@ -13,9 +13,17 @@ h1 {
     display: inline-block;
 }
 
-.text-center {
+.center-intro {
+    color: whitesmoke;
+    margin: 0px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+i.em-svg {
+    height: 2.0em;
+    width: 2.0em;
+    margin-left: 45%;
 }
