@@ -1,9 +1,9 @@
 {
-  "name": "Nathan Gostelow",
+  "name": "gatsby-starter-default",
   "private": true,
-  "description": "Nathan Gostelow's personal site built with Gatsby starter",
+  "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Nathan Gostelow",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^2.21.37",
     "gatsby-image": "^2.4.4",
@@ -22,7 +22,7 @@
     "prettier": "2.0.5"
   },
   "keywords": [
-    "gatsby", "Nathan Gostelow"
+    "gatsby"
   ],
   "license": "MIT",
   "scripts": {
@@ -36,9 +36,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NathanGostelow/NathanGostelow"
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "bugs": {
-    "url": "https://github.com/NathanGostelow/NathanGostelow/issues"
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
