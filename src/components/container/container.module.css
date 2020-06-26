@@ -26,6 +26,7 @@
     flex-flow: row;
     justify-content: center;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .header-content {
@@ -37,46 +38,74 @@
 
 .header-name {
     margin: 0;
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 .header-title { 
     opacity: 0.5;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin: 6px 0;
 }
 
 .nathan {
     width: 50%;
     border-radius: 50%;
-    margin-right: 0 24px;
+    margin: 24px;
     /* max width is the size of the image so as it doesnt distort */
     max-width: 581px 
 }
 
 .button-container {
     margin: 24px 0;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 .button {
     text-decoration: none;
     color: inherit;
     margin-right: 12px;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     border-bottom: 2px solid var(--accent-color);
+}
+
+.details {
+    width: 70%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.description {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
 }
 
 @media screen and (max-width: 600px) {
     .button {
-        font-size: 1.3em;
+        font-size: 1.3rem;
+    }
+
+    .header {
+            margin: 24px 0 0
     }
 
     .header-name {
-        font-size: 2em;
+        font-size: 2.2rem;
     }
     
     .header-title {
-        font-size: 1.3em;
+        font-size: 1.3rem;
     }
+    .details {
+        max-width: 300px;
+    }
+    
+    .description {
+        font-size: 1.1rem
+    }
+
+    .nathan { 
+        display: none;
+    }
+    
 }
