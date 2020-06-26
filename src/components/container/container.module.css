@@ -1,32 +1,27 @@
 
 .container {
     min-height: 100vh;
-    /* margin: 0 auto; */
-    /* width: 50%; */
-    /* margin-left: 25%; */
-    /* width: 50%; */
     margin: 0 auto;
 
 }
 
 
 .main{
-    /* border: 1px solid #E9B9AF; */
-    /* border-radius: 5px;  */
     display: flex;
-    /* justify-content: center; */
     flex-flow: column;
-    /* align-items: center; */
-    /* padding: 24px; */
+    height: 100vh;
 }
 
 .header { 
-    margin: 48px 0px;
+    margin: 48px auto;
     display: flex;
     flex-flow: row;
     justify-content: center;
     flex-wrap: wrap;
-    text-align: center;
+    text-align: left;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
 }
 
 .header-content {
@@ -34,6 +29,8 @@
     flex-flow: column;
     justify-content: center;
     margin: 24px;
+    width: 50%;
+    max-width: 581px;
 }
 
 .header-name {
@@ -48,11 +45,11 @@
 }
 
 .nathan {
-    width: 50%;
+    width: 50vw;
     border-radius: 50%;
     margin: 24px;
     /* max width is the size of the image so as it doesnt distort */
-    max-width: 581px 
+    max-width: 500px 
 }
 
 .button-container {
@@ -86,11 +83,18 @@
     }
 
     .header {
-            margin: 24px 0 0
+        margin: 0;
+        display: block;
+        width: 100vw;
     }
 
     .header-name {
         font-size: 2.2rem;
+    }
+
+    .header-content {
+        width: unset;
+        margin: 0 24px;
     }
     
     .header-title {
@@ -105,7 +109,20 @@
     }
 
     .nathan { 
-        display: none;
+        /* display: none; */
+        width: calc(100% - 48px);
+        /* margin: 0; */
+        /* border-radius: 0; */
     }
     
+}
+
+@media screen and (max-width: 1024px) {
+    .header-content, .nathan{
+        width: 75%;
+    }
+
+    .header {
+        flex-flow: column;
+    }
 }
