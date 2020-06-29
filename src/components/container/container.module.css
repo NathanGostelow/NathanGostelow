@@ -48,7 +48,6 @@
     width: 50vw;
     border-radius: 50%;
     margin: 24px;
-    /* max width is the size of the image so as it doesnt distort */
     max-width: 500px 
 }
 
@@ -109,10 +108,7 @@
     }
 
     .nathan { 
-        /* display: none; */
         width: calc(100% - 48px);
-        /* margin: 0; */
-        /* border-radius: 0; */
     }
     
 }

@@ -19,8 +19,7 @@ const Container = () => {
                         </h1>
                         <p className={containerStyles.headerTitle}> Senior Frontend Engineer </p>
                         <p className={containerStyles.description}> 
-                            Nathan is an enthusiastic developer who loves nothing more than to dissect 
-                            complicated problems and provide elegant solutions.
+                            Dissecting complicated problems /<br></br> Providing elegant solutions
                         </p>
                         <div className={containerStyles.buttonContainer}>
                             <a className={containerStyles.button} href="https://github.com/NathanGostelow"> Github </a>
