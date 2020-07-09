@@ -1,0 +1,19 @@
+:root {
+    --main-color: #f1f5f2;
+    --secondary-color: #011c27;
+    --accent-color: #35a7ff;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-color: #011c27;
+        --secondary-color: #f1f5f2;
+        --accent-color: #fff94f;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+}
