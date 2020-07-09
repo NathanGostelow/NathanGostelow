@@ -1,19 +1,19 @@
 :root {
-    --main-color: #F1F5F2;
-    --secondary-color: #011C27;
-    --accent-color: #35A7FF;
+    --main-color: #f1f5f2;
+    --secondary-color: #011c27;
+    --accent-color: #35a7ff;
 }
 @media (prefers-color-scheme: dark) {
     :root {
-        --main-color: #011C27;
-        --secondary-color: #F1F5F2;
-        --accent-color: #FFF94F;
+        --main-color: #011c27;
+        --secondary-color: #f1f5f2;
+        --accent-color: #fff94f;
     }
 }
 
-body { 
+body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: var(--secondary-color);
     background-color: var(--main-color);
 }

@@ -1,16 +1,16 @@
-import React from "react"
+import React from "react";
 
-import SEO from "../components/seo"
+import SEO from "../components/seo";
 import Layout from "../components/layout/layout";
-import Container from '../components/container/container';
+import Container from "../components/container/container";
 
 const IndexPage = () => (
-  <>
-    <SEO title="Nathan Gostelow"/>
-    <Layout>
-      <Container /> 
-    </Layout>
-  </>
-)
+    <>
+        <SEO title='Nathan Gostelow' />
+        <Layout>
+            <Container />
+        </Layout>
+    </>
+);
 
-export default IndexPage
+export default IndexPage;

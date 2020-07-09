@@ -1,11 +1,11 @@
-.main{
+.main {
     height: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
 }
 
-.header { 
+.header {
     width: 100%;
     display: flex;
     flex-flow: row;
@@ -24,10 +24,10 @@
 
 .header-name {
     margin: 0;
-    font-size: 3rem; 
+    font-size: 3rem;
 }
 
-.header-title { 
+.header-title {
     opacity: 0.5;
     margin: 6px 0;
     font-size: 1.5rem;
@@ -35,15 +35,15 @@
 
 .nathan {
     width: 300px;
-    height:300px;
+    height: 300px;
     border-radius: 50%;
     display: block;
     margin: 24px;
 }
 
 .button-container {
-     margin: 24px 0;
-     font-size: 1.2rem;
+    margin: 24px 0;
+    font-size: 1.2rem;
 }
 
 .button {
@@ -87,8 +87,8 @@
     .header-content {
         margin: 24px 0;
     }
-    
+
     .description {
-        font-size: 1.1rem
+        font-size: 1.1rem;
     }
 }
