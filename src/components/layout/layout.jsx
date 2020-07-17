@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
     const prefersDarkMode =
         typeof window !== "undefined"
             ? window.matchMedia("(prefers-color-scheme: dark)").matches
-            : true;
+            : false;
 
     const setDarkMode = mode =>
         typeof document !== "undefined" &&
