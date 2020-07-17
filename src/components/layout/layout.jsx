@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import layoutStyles from "./layout.module.css";
 
 const Layout = ({ children }) => {
-    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches;
+    const prefersDarkMode =
+        typeof window !== "undefined"
+            ? window.matchMedia("(prefers-color-scheme: dark)").matches
+            : true;
     if (prefersDarkMode)
         document.documentElement.setAttribute("data-theme", "dark");
 
