@@ -58,7 +58,7 @@ const MagicScriptTag = () => {
     const codeToRunOnClient = `
   (function() {
         function setTheme(mode) {
-            console.log(model, document);
+            console.log(mode, document);
             document.documentElement.setAttribute("data-theme", mode);
         }
 
