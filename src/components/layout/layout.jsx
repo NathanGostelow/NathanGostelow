@@ -6,19 +6,22 @@ const Layout = ({ children }) => {
         typeof window !== "undefined"
             ? window.matchMedia("(prefers-color-scheme: dark)").matches
             : true;
-    if (prefersDarkMode)
-        document.documentElement.setAttribute("data-theme", "dark");
+
+    const setDarkMode = mode =>
+        typeof document !== "undefined" &&
+        document.documentElement.setAttribute("data-theme", mode);
+
+    if (prefersDarkMode) setDarkMode("dark");
 
     useEffect(() => {
-        if (!prefersDarkMode)
-            document.documentElement.setAttribute("data-theme", "light");
+        if (!prefersDarkMode) setDarkMode("light");
     }, [prefersDarkMode]);
 
     const toggleTheme = event => {
         if (event.target.checked) {
-            document.documentElement.setAttribute("data-theme", "dark");
+            setDarkMode("dark");
         } else {
-            document.documentElement.setAttribute("data-theme", "light");
+            setDarkMode("light");
         }
     };
 
