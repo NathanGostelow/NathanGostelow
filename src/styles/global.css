@@ -4,6 +4,14 @@
     --accent-color: #35a7ff;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-color: #011c27;
+        --secondary-color: #f1f5f2;
+        --accent-color: #fff94f;
+    }
+}
+
 [data-theme="dark"] {
     --main-color: #011c27;
     --secondary-color: #f1f5f2;
