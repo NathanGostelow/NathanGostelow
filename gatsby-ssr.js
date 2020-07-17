@@ -19,15 +19,31 @@ export default class HTML extends React.Component {
                         dangerouslySetInnerHTML={{
                             __html: `
                                 (function() {
-                                    const prefersDarkMode =
-                                        typeof window !== "undefined"
-                                            ? window.matchMedia("(prefers-color-scheme: dark)").matches
-                                            : true;
+                                    window.__onThemeChange = function() {};
 
-                                    const setDarkMode = mode =>
-                                        typeof document !== "undefined" && document.documentElement.setAttribute("data-theme", mode);
+                                    function setTheme(newTheme) {
+                                    window.__theme = newTheme;
+                                    preferredTheme = newTheme;
+                                    document.documentElement.setAttribute("data-theme", newTheme);
+                                    window.__onThemeChange(newTheme);
+                                    }
 
-                                    if (prefersDarkMode) setDarkMode("dark");
+                                    var preferredTheme;
+                                    try {
+                                    preferredTheme = localStorage.getItem('theme');
+                                    } catch (err) { }
+                                    
+                                    window.__setPreferredTheme = function(newTheme) {
+                                    setTheme(newTheme);
+                                    try {
+                                        localStorage.setItem('theme', newTheme);
+                                    } catch (err) {}
+                                    }
+                                    var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                                    darkQuery.addListener(function(e) {
+                                    window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+                                    });
+                                    setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
 
                                 })();
                                 `,
