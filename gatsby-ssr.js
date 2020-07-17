@@ -46,7 +46,7 @@ export default class HTML extends React.Component {
                                     darkQuery.addListener(function(e) {
                                         window.__setPreferredTheme(e.matches ? 'dark' : 'light')
                                     });
-                                    
+
                                     setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
 
                                 })();
