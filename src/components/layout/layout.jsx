@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
         typeof document !== "undefined" &&
         document.documentElement.setAttribute("data-theme", mode);
 
-    if (prefersDarkMode) setDarkMode("dark");
+    // if (prefersDarkMode) setDarkMode("dark");
 
     useEffect(() => {
         if (!prefersDarkMode) setDarkMode("light");
