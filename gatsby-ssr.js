@@ -18,25 +18,16 @@ export default class HTML extends React.Component {
                     <script
                         dangerouslySetInnerHTML={{
                             __html: `
-                                (function() {
-                                    window.__onThemeChange = function() {};
-
-                                    function setTheme(newTheme) {
-                                        window.__theme = newTheme;
-                                        preferredTheme = newTheme;
-                                        document.documentElement.setAttribute("data-theme", newTheme);
-                                        window.__onThemeChange(newTheme);
+                                (() => {
+                                    function setTheme(mode) {
+                                        document.documentElement.setAttribute("data-theme", mode);
                                     }
 
-                                    var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-                                    darkQuery.addListener(function(e) {
-                                        window.__setPreferredTheme(e.matches ? 'dark' : 'light')
-                                    });
+                                    var darkmode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-                                    setTheme(darkQuery.matches ? 'dark' : 'light');
-
-                                })();
-                                `,
+                                    setTheme(darkmode ? 'dark' : 'light');
+                                })
+                            `,
                         }}
                     />
                     {this.props.preBodyComponents}
