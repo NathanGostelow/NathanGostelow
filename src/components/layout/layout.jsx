@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
                         onClick={toggleTheme}
                         type='checkbox'
                         id='checkbox'
-                        defaultChecked={isDarkMode}
+                        defaultChecked={prefersDarkMode}
                     />
                     <div className={layoutStyles.sliderRound}></div>
                 </label>
