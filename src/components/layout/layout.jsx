@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import layoutStyles from "./layout.module.css";
 
 const Layout = ({ children }) => {
+    const isDarkMode =
+        typeof document !== "undefined" &&
+        document.documentElement.getAttribute("data-theme");
+    console.log(isDarkMode);
     const prefersDarkMode =
         typeof window !== "undefined"
             ? window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -32,7 +36,7 @@ const Layout = ({ children }) => {
                     onClick={toggleTheme}
                     type='checkbox'
                     id='checkbox'
-                    defaultChecked={prefersDarkMode}
+                    defaultChecked={isDarkMode}
                 />
                 <div className={layoutStyles.sliderRound}></div>
             </label>
