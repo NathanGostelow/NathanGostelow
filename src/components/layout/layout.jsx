@@ -2,9 +2,8 @@ import React, { useEffect } from "react";
 import layoutStyles from "./layout.module.css";
 
 const Layout = ({ children }) => {
-    const isDarkMode =
-        typeof document !== "undefined" &&
-        document.documentElement.getAttribute("data-theme");
+    const isNotSSR =
+        typeof document !== "undefined" || typeof window !== "undefined";
     console.log(isDarkMode);
     const prefersDarkMode =
         typeof window !== "undefined"
@@ -31,15 +30,17 @@ const Layout = ({ children }) => {
 
     return (
         <div className={layoutStyles.layout}>
-            <label htmlFor='checkbox' className={layoutStyles.switch}>
-                <input
-                    onClick={toggleTheme}
-                    type='checkbox'
-                    id='checkbox'
-                    defaultChecked={isDarkMode}
-                />
-                <div className={layoutStyles.sliderRound}></div>
-            </label>
+            {isNotSSR && (
+                <label htmlFor='checkbox' className={layoutStyles.switch}>
+                    <input
+                        onClick={toggleTheme}
+                        type='checkbox'
+                        id='checkbox'
+                        defaultChecked={isDarkMode}
+                    />
+                    <div className={layoutStyles.sliderRound}></div>
+                </label>
+            )}
             {children}
         </div>
     );
