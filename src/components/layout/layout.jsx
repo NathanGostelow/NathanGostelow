@@ -4,7 +4,7 @@ import layoutStyles from "./layout.module.css";
 const Layout = ({ children }) => {
     const isNotSSR =
         typeof document !== "undefined" || typeof window !== "undefined";
-    console.log(isDarkMode);
+    console.log(isNotSSR);
     const prefersDarkMode =
         typeof window !== "undefined"
             ? window.matchMedia("(prefers-color-scheme: dark)").matches
